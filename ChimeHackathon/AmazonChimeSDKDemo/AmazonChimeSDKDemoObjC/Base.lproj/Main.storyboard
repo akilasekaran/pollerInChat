@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller ObjC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewControllerObjC" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Meeting ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ajE-1W-swG">
+                                <rect key="frame" x="117" y="400" width="180" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="yea-s4-Q1M"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GYb-qN-kDH">
+                                <rect key="frame" x="117" y="450" width="180" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="G50-Ai-0VW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Join a Meeting" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uia-Yo-wKO">
+                                <rect key="frame" x="82.5" y="320" width="249.5" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WLF-PZ-6RX">
+                                <rect key="frame" x="195" y="500" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="24" id="H3a-gB-JqH"/>
+                                    <constraint firstAttribute="height" constant="24" id="oQD-n5-vM8"/>
+                                </constraints>
+                                <state key="normal" image="join"/>
+                                <connections>
+                                    <action selector="joinMeeting:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h3b-1e-S7J"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yRo-PN-JIQ">
+                                <rect key="frame" x="195" y="500" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="Qzt-mZ-sft"/>
+                                    <constraint firstAttribute="width" constant="24" id="eRz-fA-C6b"/>
+                                </constraints>
+                                <state key="normal" image="meeting-end"/>
+                                <connections>
+                                    <action selector="leaveMeeting:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jcW-aZ-ITV"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="WLF-PZ-6RX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3MG-8m-aIQ"/>
+                            <constraint firstItem="uia-Yo-wKO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5Rj-Xu-HDd"/>
+                            <constraint firstItem="ajE-1W-swG" firstAttribute="top" secondItem="uia-Yo-wKO" secondAttribute="bottom" constant="32" id="8P6-Ul-9ZB"/>
+                            <constraint firstItem="ajE-1W-swG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ajc-0e-CAn"/>
+                            <constraint firstItem="GYb-qN-kDH" firstAttribute="top" secondItem="ajE-1W-swG" secondAttribute="bottom" constant="16" id="FYF-md-3R7"/>
+                            <constraint firstItem="yRo-PN-JIQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Fbd-hf-Qq7"/>
+                            <constraint firstItem="yRo-PN-JIQ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="64" id="LiB-0a-mFb"/>
+                            <constraint firstItem="GYb-qN-kDH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="M8t-GE-DPw"/>
+                            <constraint firstItem="WLF-PZ-6RX" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="64" id="ZKU-C8-6q7"/>
+                            <constraint firstItem="WLF-PZ-6RX" firstAttribute="top" secondItem="GYb-qN-kDH" secondAttribute="bottom" constant="16" id="Zi1-B7-xsv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="joinButton" destination="WLF-PZ-6RX" id="JuZ-xV-a5n"/>
+                        <outlet property="leaveButton" destination="yRo-PN-JIQ" id="Hfq-qe-jDI"/>
+                        <outlet property="meetingIDText" destination="ajE-1W-swG" id="ACa-bh-2DA"/>
+                        <outlet property="nameText" destination="GYb-qN-kDH" id="nDQ-cD-Eh3"/>
+                        <outlet property="titleLabel" destination="uia-Yo-wKO" id="Pqd-vL-JGI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.875" y="137.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="join" width="24" height="24"/>
+        <image name="meeting-end" width="24" height="24"/>
+    </resources>
+</document>
